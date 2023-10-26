@@ -17,4 +17,17 @@ export class CompteComponent {
   password : string = "";
   login : string = "";
   pays : string = "";
+  affiche: boolean = false;
+  valid: boolean = true;
+  isValid(): boolean{
+    return this.valid;
+  }
+
+  desactivation(){
+    this.valid = false;
+  }
+
+  toggleInfo(){
+     this.affiche = !this.affiche;
+  }
 }

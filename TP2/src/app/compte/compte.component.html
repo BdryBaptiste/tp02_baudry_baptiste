@@ -9,15 +9,20 @@
 <p>Civilité: <input [(ngModel)] = "civilite"/></p>
 <p>Téléphone: <input [(ngModel)] = "telephone"/></p>
 <p>Pays: <input [(ngModel)] = "pays"/></p>
-<p>Récapitulatif:</p>
-<p>Login: {{login}}</p>
-<p>Password: {{password}}</p>
-<p>Nom: {{nom}}</p>
-<p>Prénom: {{prenom}}></p>
-<p>Adresse: {{adresse}}</p>
-<p>Code postal: {{codePostal}}</p>
-<p>Ville: {{ville}}</p>
-<p>Email: {{email}}</p>
-<p>Civilité: {{civilite}}</p>
-<p>Téléphone: {{telephone}}</p>
-<p>Pays: {{pays}}</p>
+<br>
+<button [disabled]="!isValid" (click)="toggleInfo()">Valider</button>
+<br>
+<div *ngIf="affiche">
+    <p>Récapitulatif:</p>
+    <p>Login: {{login}}</p>
+    <p>Password: {{password}}</p>
+    <p>Nom: {{nom}}</p>
+    <p>Prénom: {{prenom}}></p>
+    <p>Adresse: {{adresse}}</p>
+    <p>Code postal: {{codePostal}}</p>
+    <p>Ville: {{ville}}</p>
+    <p>Email: {{email}}</p>
+    <p>Civilité: {{civilite}}</p>
+    <p>Téléphone: {{telephone}}</p>
+    <p>Pays: {{pays}}</p>
+</div>
